@@ -4,8 +4,16 @@ body {
 }
 
 .App { 
-  max-width: 950px;
+  position: relative;
+  max-width: 100%;
   margin: 0;
+}
+
+.container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .App h1 { 
@@ -19,19 +27,24 @@ body {
 }
 
 .input-wrapper { 
-  position: relative;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  /* background: red; */
 }
 
 .input-wrapper label { 
   display: inline-block;
-  padding: 8px 12px;
+  padding: 12px 12px;
   cursor: pointer;
   border-radius: 4px;
-  background:coral; 
+  background:rgb(81, 12, 241); 
   color: #fff;
 }
 
-.input-wrapper input[type='file'] { 
+.input-wrapper input[type="file"] {
+  display: none;
   position: absolute;
   left: 26px;
   top: 6px;
@@ -41,37 +54,43 @@ body {
 }
 
 .result { 
-  margin-top: 4rem;
+  margin-top: 1rem;
   display: grid;
   align-items: center;
   justify-content: center;
+  /* background: yellow; */
 }
 
 .result .box-image { 
-  background: coral;
-  height: 100%;
+  /* background: coral; */
   padding: 1rem;
 }
 
-.result img { 
-  width: 100%;
+.result .box-p {
+  /* background: red; */
+  width: 80%;
   height: 100%;
-  object-fit: contain;
-
+  padding: 1rem;
+  display: flex;
+  justify-self: center;
 }
 
-.result img {
-  width: 100%;
-  height: 100%;
+.result img { 
   object-fit: contain;
+
 }
 
 .result p {
   line-height: 1.5rem;
-  font-size: 1rem
+  font-size: 1rem;
+  width: 100%;
+  height: 200px;
+  text-align: center;
 }
 
-@media (min-width: 1000px) { 
+
+
+@media (min-width: 20000px) { 
   .result {
     grid-template-columns: 1fr 1fr;
   }

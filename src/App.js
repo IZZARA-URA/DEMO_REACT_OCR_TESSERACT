@@ -32,24 +32,29 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ImText</h1>
-      <p>Gets words in image!</p>
-      <div className="input-wrapper">
-        <label htmlFor="upload">Upload Image</label>
-        <input type="file" id="upload" accept='image/*' onChange={handleChangeImage} />
-      </div>
+      <div className='container'>
+        <h1>DEMO REACT OCR : IMAGE TO TEXT</h1>
+        <p>Gets words in image!</p>
 
-      <div className="result">
-        {selectedImage && (
-          <div className="box-image">
-            <img src={URL.createObjectURL(selectedImage)} alt="thumb" />
-          </div>
-        )}
-        {textResult && (
-          <div className="box-p">
-            <p>{textResult}</p>
-          </div>
-        )}
+        <div className="result">
+          {selectedImage && (
+            <div className="box-image">
+              <img src={URL.createObjectURL(selectedImage)} alt="thumb" />
+            </div>
+          )}
+          {textResult && (
+            <div className="box-p">
+              <p>{textResult}</p>
+            </div>
+          )}
+        </div>
+
+
+        <div className="input-wrapper">
+          <label htmlFor="upload">Upload Image</label>
+          <input type="file" id="upload" accept='image/*' onChange={handleChangeImage} />
+        </div>
+
       </div>
     </div>
   );
